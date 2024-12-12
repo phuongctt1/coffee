@@ -1,5 +1,3 @@
-// import { renderCoffee } from "./main.js";
-
 const BASE_URL = "http://localhost:8080";
 
 function fetchCustom(path, option) {

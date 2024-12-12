@@ -11,7 +11,11 @@ export async function renderCoffee() {
       const errorData = await response.json();
       throw new Error(errorData.message || "An error occurred.");
     }
+
     const data = await response.json();
+    if (data=="") {
+      throw new Error("No data");
+    }
     const html = data.map((coffee) => {
       return `
           <div class="item" data-id="${coffee.id}">
@@ -26,8 +30,7 @@ export async function renderCoffee() {
               <input class="description" type="text" name="description" value="${coffee.description}">
               
               <button type="button" class="button-update">Update</button>
-              <div class="error-item"></div>
-              
+              <div class="error-item"></div>      
               
             </form>
           </div>
@@ -45,7 +48,7 @@ export async function renderCoffee() {
     });
   }catch(error){
     const errorMessage = error.message;
-    listContent.innerHTML = errorMessage || "An error occurred"
+    listContent.innerHTML = errorMessage;
 
 
   }
@@ -79,7 +82,6 @@ export function handleCreateCoffee() {
       }
       const data = await response.json();
       renderCoffee();
-
       form.reset();
       errorElement.innerHTML = "";
     } catch (error) {
@@ -99,7 +101,6 @@ export async function handleUpdate(event) {
   const descriptionInput = parentElement.querySelector(
     'input[name="description"]'
   );
-  // const errorInput = parentElement.querySelector('input[name="error"]');
   const errorElement = parentElement.querySelector('.error-item');
 
   const updateData = {
@@ -126,17 +127,10 @@ export async function handleUpdate(event) {
   } catch (error) {
     const errorMessage = error.message;
     console.log(error);
-    // errorInput.value = errorMessage || "An error occurred.";
     errorElement.innerHTML = errorMessage
     console.log("error", errorMessage);
   }
 
-  titleInput.addEventListener("input", () => {
-    errorInput.value = "";
-  });
-  descriptionInput.addEventListener("input", () => {
-    errorInput.value = "";
-  });
 }
 
 renderCoffee();
