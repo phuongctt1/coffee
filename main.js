@@ -49,43 +49,6 @@ export async function renderCoffee() {
 
 
   }
-  // const response = await getCoffee();
-  // console.log("response", response);
-  // const data = await response.json();
-
-
-  
-  // const html = data.map((coffee) => {
-  //   return `
-  //       <div class="item" data-id="${coffee.id}">
-  //         <img src="${coffee.thumbnail}" width="100px" height="100px" style="display: block; margin: 0 auto;">
-  //         <div class="content">
-  //           <h4>${coffee.title}</h4>
-  //           <h5>${coffee.description}</h5>
-  //         </div>
-  //         <button class="button-edit">Edit</button>
-  //         <form class="form__update hidden">
-  //           <input type="text" name="title" value="${coffee.title}">
-  //           <input class="description" type="text" name="description" value="${coffee.description}">
-            
-  //           <button type="button" class="button-update">Update</button>
-  //           <div class="error-item"></div>
-            
-            
-  //         </form>
-  //       </div>
-  //     `;
-  // });
-
-  // listContent.innerHTML = html.join("");
-
-  // document.querySelectorAll(".button-edit").forEach((btn) => {
-  //   btn.addEventListener("click", (event) => handleEdit(event));
-  // });
-
-  // document.querySelectorAll(".button-update").forEach((btn) => {
-  //   btn.addEventListener("click", (event) => handleUpdate(event));
-  // });
 }
 
 function handleEdit(event) {
