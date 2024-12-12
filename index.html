@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <form class="form">
-        <h2>Add Coffee</h2>
-        <div>
-            <label for="ftitle">Title</label>
-            <input type="text" id="ftitle" name="title">
-        </div>
+      <h2>Add Coffee</h2>
+      <div>
+        <label for="ftitle">Title</label>
+        <input type="text" id="ftitle" name="title" />
+      </div>
 
-        <div>
-            <label for="fdescription">Description</label>
-            <input type="text" id="fdescription" name="description">
-        </div>
+      <div>
+        <label for="fdescription">Description</label>
+        <input type="text" id="fdescription" name="description" />
+      </div>
 
-        <div>
-            <label for="fthumbnail">Thumbnail</label>
-            <input type="file" id="fthumbnail" name="thumbnail">
-        </div>
-        <br/>
-        <div>
-            <button type="submit" id="add">Add</button>
-        </div>
+      <div>
+        <label for="fthumbnail">Thumbnail</label>
+        <input type="file" id="fthumbnail" name="thumbnail" />
+      </div>
+      <br />
+      <div>
+        <button type="submit" id="add">Add</button>
+      </div>
+      <!-- <label for="error">Error message</label> -->
+      <!-- <input class="error" name="error" readonly value="" /> -->
+      <div class="error-message"></div>
     </form>
 
     <div class="content">
-        <h2>List coffee</h2>
-        <div class="list">
-        </div>
+      <h2>List coffee</h2>
+      <div class="list-coffee"></div>
     </div>
 
-    <script src="./app.js"></script>
-
-
-</body>
+    <!-- <script src="./app.js"></script> -->
+    <script type="module" src="./main.js"></script>
+  </body>
 </html>

@@ -49,7 +49,7 @@ input[type="text"] {
   margin: 5px;
 }
 
-.list {
+.list-coffee {
   display: flex;
   flex-wrap: wrap;
 }
@@ -71,6 +71,7 @@ h5 {
   height: 150px;
   padding: 10px 0px;
   margin: 5px 0px;
+  font-weight: 100;
   word-wrap: break-word;
   white-space: normal;
   overflow-y: auto;
@@ -103,4 +104,24 @@ h5 {
 .button-update {
   padding: 10px 15px;
   margin-top: 90px;
+}
+
+.error {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: red;
+}
+
+.error-message {
+  color: red;
+}
+
+.error-item {
+  margin: 10px auto;
+  color: red;
 }
