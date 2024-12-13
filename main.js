@@ -13,7 +13,7 @@ export async function renderCoffee() {
     }
 
     const data = await response.json();
-    if (data=="") {
+    if (!Array.isArray(data) || data.length ===0) {
       throw new Error("No data");
     }
     const html = data.map((coffee) => {
@@ -25,7 +25,7 @@ export async function renderCoffee() {
               <h5>${coffee.description}</h5>
             </div>
             <button class="button-edit">Edit</button>
-            <form class="form__update hidden">
+            <form class="form-update hidden">
               <input type="text" name="title" value="${coffee.title}">
               <input class="description" type="text" name="description" value="${coffee.description}">
               
@@ -56,7 +56,7 @@ export async function renderCoffee() {
 
 function handleEdit(event) {
   const parentElement = event.target.closest(".item");
-  const formUpdateElement = parentElement.querySelector(".form__update");
+  const formUpdateElement = parentElement.querySelector(".form-update");
   const contentElement = parentElement.querySelector(".content");
   const btnEditElement = parentElement.querySelector(".button-edit");
 
@@ -120,7 +120,7 @@ export async function handleUpdate(event) {
     parentElement.querySelector("h4").innerText = updateData.title;
     parentElement.querySelector("h5").innerText = updateData.description;
 
-    parentElement.querySelector(".form__update").classList.remove("active");
+    parentElement.querySelector(".form-update").classList.remove("active");
     parentElement.querySelector(".content").classList.remove("hidden");
     parentElement.querySelector(".button-edit").classList.remove("hidden");
     errorElement.innerHTML = ""

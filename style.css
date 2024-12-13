@@ -23,7 +23,6 @@ input[type="text"] {
 
 .form,
 .form-update {
-  margin-top: 20px;
   width: 600px;
   margin: 0 auto;
 }
@@ -32,7 +31,7 @@ input[type="text"] {
   margin: 5px auto;
 }
 
-.form__update {
+.form-update {
   display: none;
 }
 
@@ -44,9 +43,10 @@ input[type="text"] {
   display: none;
 }
 
-.form__update.active {
+.form-update.active {
   display: block;
-  margin: 5px;
+  width: 100%;
+  margin: 20px auto;
 }
 
 .list-coffee {
