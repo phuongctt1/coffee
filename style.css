@@ -1,0 +1,137 @@
+/* Reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#add {
+  padding: 10px 20px;
+  margin: 10px auto;
+}
+
+.form,
+.form-update {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.content {
+  margin: 5px auto;
+}
+
+.form-update {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-update.active {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.list-coffee {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h2 {
+  text-align: center;
+}
+
+h4 {
+  width: 100%;
+  height: 50px;
+  padding: 10px 0px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+h5 {
+  width: 100%;
+  height: 150px;
+  padding: 10px 0px;
+  margin: 5px 0px;
+  font-weight: 100;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-y: auto;
+}
+.item {
+  width: 200px;
+  padding: 10px;
+  margin: 20px 30px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.description {
+  width: 100%;
+  height: auto;
+  padding: 40px 10px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.form {
+  margin: 30px auto;
+}
+
+.button-edit {
+  padding: 10px 15px;
+  margin: 5px;
+}
+
+.button-update {
+  padding: 10px 15px;
+  margin-top: 90px;
+}
+
+.error {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: red;
+}
+
+.error-message {
+  color: red;
+}
+
+.error-item {
+  height: 25px;
+  margin: 10px auto;
+  color: red;
+}
+
+.list-coffee {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* .item {
+  margin: 20px 30px; 
+} */
